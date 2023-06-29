@@ -10,11 +10,12 @@ public class S1_01_FindChar {
         t = Character.toUpperCase(t);
         // System.out.println(str + " " + t);
 
-        for(int i=0; i<str.length(); i++){
-            if (str.charAt(i) == t){
-                answer ++;
-            }
-        }
+        // for(int i=0; i<str.length(); i++){
+        // if (str.charAt(i) == t){answer ++;}
+        // }
+
+        for(char x : str.toCharArray())     // 문자열을 새로운
+            if (x == t){answer ++;}
 
         // System.out.println("answer = " + answer);
         return answer;
