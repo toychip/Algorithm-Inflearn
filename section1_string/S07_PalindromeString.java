@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class S07_PalindromeString {
 
-    public String solution(String str) {
+    public String solution1(String str) {
         String answer = "YES";
         String testStr = str.toUpperCase();
 
@@ -14,19 +14,28 @@ public class S07_PalindromeString {
                 break;
             }
         }
-
-        // System.out.println(" str.length()= " + str.length());
-        // System.out.println("count = " + count);
-
-
         return answer;
     }
+
+    // String Builder 사용
+    public String solution2(String str) {
+        String answer = "YES";
+        str = str.toUpperCase();
+        String temp = new StringBuilder(str).reverse().toString();
+
+        if(!temp.equals(str)){
+            answer = "no";
+        }
+        return answer;
+    }
+
 
     public static void main(String[] args){
         S07_PalindromeString S7 = new S07_PalindromeString();
         Scanner kb = new Scanner(System.in);
 
         String next = kb.next();
-        System.out.println(S7.solution(next));
+//        System.out.println(S7.solution1(next));
+        System.out.println(S7.solution2(next));
     }
 }
