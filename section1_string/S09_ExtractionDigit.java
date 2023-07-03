@@ -28,10 +28,10 @@ public class S09_ExtractionDigit {
     }
 
     public static void main(String[] args){
-        S09_ExtractionDigit S8 = new S09_ExtractionDigit();
+        S09_ExtractionDigit S9 = new S09_ExtractionDigit();
         Scanner kb = new Scanner(System.in);
 
         String next = kb.nextLine();
-        System.out.println(S8.solution1(next));
+        System.out.println(S9.solution1(next));
     }
 }
